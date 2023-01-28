@@ -4,7 +4,7 @@
     <img src="https://cwd.systems/img/cwd-logo.png"  alt="CWD Systems">
   </picture>
   </p>
-  <br>
+
 
 ### Information
 Default LAN IP address is 192.168.2.1. Policy based VPN routing is disabled by default.
