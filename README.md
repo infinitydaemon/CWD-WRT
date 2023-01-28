@@ -1,6 +1,6 @@
 
 ### Information
-Default LAN IP address is 192.168.2.1.
+Default LAN IP address is 192.168.2.1. Policy based VPN routing is disabled by default.
 
 ### Requirements
 
