@@ -9,7 +9,7 @@ distributions. A complete list with distribution specific packages is found in
 the [Build System Setup](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem)
 documentation.
 
-### Quikstart Guide to Build Orange Pi R1 Plus / R1 Plus LTS Firmware
+### Quikstart Guide to Build Firmware
 
 You will need to build the firmware using branch **openwrt-21.02**, not the master branch
 
