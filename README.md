@@ -24,7 +24,6 @@ You will need to build the firmware using branch **openwrt-21.02**, not the mast
 git clone https://github.com/infinitydaemon/CWD-WRT.git
 cd CWD-WRT
 git branch -a
-git checkout openwrt-21.02
 ./scripts/feeds update -a
 ./scripts/feeds install -a 
 ```
