@@ -9,13 +9,6 @@
 ### Information
 Default LAN IP address is 192.168.2.1. Policy based VPN routing is disabled by default.
 
-### Requirements
-
-You need the following tools to compile OpenWrt, the package names vary between
-distributions. A complete list with distribution specific packages is found in
-the [Build System Setup](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem)
-documentation.
-
 ### Quikstart Guide to Build Firmware
 
 You will need to build the firmware using branch **openwrt-21.02**, not the master branch
@@ -28,17 +21,13 @@ git branch -a
 ./scripts/feeds install -a 
 ```
 
-Run `make menuconfig` and configure the target system & firmware packages.
-For the first build, run the below commands to download tool/packages and compile:
+Run `make menuconfig` and configure the target system as rockship.
+Download tool/packages and compile:
 
 ```
 make download -j8
-make V=s -j1
+make V=s -j$(nproc)
 ```
-
-It is suggested to build with single thread. You can also build with multi-thread:
-
-`make V=s -j$(nproc)`
 
 For the second build 
 ```
