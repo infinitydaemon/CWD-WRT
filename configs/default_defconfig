@@ -1,4 +1,4 @@
-# Test build profile
+# Primary default config def
 CONFIG_MODULES=y
 CONFIG_HAVE_DOT_CONFIG=y
 CONFIG_HOST_OS_LINUX=y
