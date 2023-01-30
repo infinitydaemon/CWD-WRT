@@ -1,13 +1,13 @@
  <p align="center">
  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cwd.systems/img/cwd-logo.png">
-    <img src="https://cwd.systems/img/cwd-logo.png"  alt="CWD Systems">
+    <source media="(prefers-color-scheme: dark)" srcset="https://cwd.systems/img/cwd-blade.png">
+    <img src="https://cwd.systems/img/cwd-blade.png"  alt="CWD Systems">
   </picture>
   </p>
 
 
 ### Information
-Default LAN IP address is 192.168.2.1. Policy based VPN routing is disabled by default.
+Default LAN IP address is 192.168.1.1. Policy based VPN routing is disabled by default.
 
 ### Quikstart Guide to Build Firmware
 
@@ -21,25 +21,13 @@ git branch -a
 ./scripts/feeds install -a 
 ```
 
-Run `make menuconfig` and configure the target system as rockship.
+Run `make menuconfig` and configure the target system as rockchip followed by any packages you need built.
 Download tool/packages and compile:
 
 ```
 make download -j8
-make V=s -j$(nproc)
+make V=s -j$(nproc) . This uses all available CPU cores for build process.
 ```
-
-For the second build 
-```
-cd CWD-WRT
-git pull
-./scripts/feeds update -a
-./scripts/feeds install -a
-make defconfig
-make download -j8
-make V=s -j$(nproc)
-```
-
 ### Related Repositories
 
 The main repository uses multiple sub-repositories to manage packages of
