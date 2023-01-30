@@ -4,7 +4,24 @@
     <img src="https://cwd.systems/img/cwd-logo.png"  alt="CWD Systems">
   </picture>
   </p>
+  
+```python
+class CWD_WRT():
+    
+  def __init__(self):
+    self.name = "cwd";
+    self.username = "cwdsystems";
+    self.location = "USA, Canada, Pakistan, KyrgzRepublic, Indonesia";
+    self.protonmail = "@cwdsystems";
+    self.web = "https://cwd.systems";
+    self.languages ="Python,C,JS,HTML";
+  
+  def __str__(self):
+    return self.name
 
+if __name__ == '__main__':
+    me = CWD_WRT()
+```
 
 ### Information
 Default LAN IP address is 192.168.1.1. Policy based VPN routing is disabled by default.
