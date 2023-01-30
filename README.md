@@ -1,7 +1,7 @@
  <p align="center">
  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cwd.systems/img/cwd-blade.png">
-    <img src="https://cwd.systems/img/cwd-blade.png"  alt="CWD Systems">
+    <source media="(prefers-color-scheme: dark)" srcset="https://cwd.systems/img/cwd-logo.png">
+    <img src="https://cwd.systems/img/cwd-logo.png"  alt="CWD Systems">
   </picture>
   </p>
 
