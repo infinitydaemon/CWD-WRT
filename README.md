@@ -1,9 +1,5 @@
- <p align="center">
- <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cwd.systems/img/cwd-logo.png">
-    <img src="https://cwd.systems/img/cwd-logo.png"  alt="CWD Systems">
-  </picture>
-  </p>
+ ![Github Banner](https://cwd.systems/img/banner.png)
+
   
 ```python
 class CWD_WRT():
