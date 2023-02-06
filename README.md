@@ -80,4 +80,6 @@ packages to OpenWrt, please find the fitting repository below.
 
 ## License
 
-OpenWrt is licensed under GPL-2.0
+OpenWrt is licensed under GPL-2.0 <br>
+ <p align="center">
+<img height="40" src="https://cdn3.emoji.gg/emojis/3734-staff-badge-check.png"> </p>
