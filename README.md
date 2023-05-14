@@ -10,7 +10,7 @@ class CWD_WRT():
         self.location = "USA, Canada, Pakistan, KyrgzRepublic, Indonesia"
         self.protonmail = "@cwdsystems"
         self.web = "https://cwd.systems"
-        self.languages = "Python, C, JS, HTML"
+        self.languages = "Python, C, JS, HTML, PERL"
     
     def __str__(self):
         return self.name
