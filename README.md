@@ -7,7 +7,7 @@ class CWD_WRT():
     def __init__(self):
         self.name = "cwd"
         self.username = "cwdsystems"
-        self.location = "KyrgzRepublic"
+        self.location = "Kyrgz Republic"
         self.protonmail = "@cwdsystems"
         self.web = "https://cwd.systems"
         self.languages = "Python, C, JS, HTML, PERL"
