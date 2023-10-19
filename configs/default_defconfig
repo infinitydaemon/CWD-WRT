@@ -1429,10 +1429,10 @@ CONFIG_PACKAGE_netatop=y
 #
 # Configuration
 #
-# CONFIG_SCHROOT_BTRFS is not set
-# CONFIG_SCHROOT_LOOPBACK is not set
-# CONFIG_SCHROOT_LVM is not set
-# CONFIG_SCHROOT_UUID is not set
+CONFIG_SCHROOT_BTRFS=y
+CONFIG_SCHROOT_LOOPBACK=y
+CONFIG_SCHROOT_LVM=y
+CONFIG_SCHROOT_UUID=y
 # end of Configuration
 
 # CONFIG_PACKAGE_sudo is not set
