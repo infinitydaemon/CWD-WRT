@@ -1,36 +1,48 @@
-#!/bin/sh
+#!/bin/bash
 
-[ "$ACTION" = add ] || exit
+# Check for root privileges
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script must be run as root."
+    exit 1
+fi
+
+# Check if board_name function is available
+if ! command -v board_name &> /dev/null; then
+    echo "Error: board_name function not found."
+    exit 1
+fi
 
 get_device_irq() {
-	local device="$1"
-
-	local line=$(grep -m 1 "${device}\$" /proc/interrupts)
-	echo ${line} | sed 's/:.*//'
+    local device="$1"
+    local line
+    read -r line < <(grep -m 1 "${device}\$" /proc/interrupts)
+    echo "${line%%:*}"
 }
 
 set_interface_core() {
-	local core_mask="$1"
-	local interface="$2"
-	local device="$3"
-
-	[ -z "${device}" ] && device="$interface"
-
-	local irq=$(get_device_irq "$device")
-
-	echo "${core_mask}" > /proc/irq/${irq}/smp_affinity
+    local core_mask="$1"
+    local interface="$2"
+    local device="$3"
+    [ -z "${device}" ] && device="$interface"
+    local irq=$(get_device_irq "$device")
+    echo "${core_mask}" > /proc/irq/${irq}/smp_affinity
 }
 
-case "$(board_name)" in
-friendlyarm,nanopi-r2s|\
-xunlong,orangepi-r1-plus|\
-xunlong,orangepi-r1-plus-lts)
-	set_interface_core 2 "eth0"
-	set_interface_core 4 "eth1" "xhci-hcd:usb3"
-	;;
-friendlyarm,nanopi-r4s)
-	set_interface_core 10 "eth0"
-	set_interface_core 20 "eth1"
-	;;
-esac
+# Main script
 
+case "$(board_name)" in
+    friendlyarm,nanopi-r2s|\
+    xunlong,orangepi-r1-plus|\
+    xunlong,orangepi-r1-plus-lts)
+        set_interface_core 2 "eth0"
+        set_interface_core 4 "eth1" "xhci-hcd:usb3"
+        ;;
+    friendlyarm,nanopi-r4s)
+        set_interface_core 10 "eth0"
+        set_interface_core 20 "eth1"
+        ;;
+    *)
+        echo "Unknown board. No actions performed."
+        exit 1
+        ;;
+esac
